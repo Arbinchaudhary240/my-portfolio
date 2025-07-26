@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A_R_B_I_N Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">A_R_B_I_N</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        ☰
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#Education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h1>Hi, I'm <span class="glow">A_R_B_I_N</span></h1>
+      <h3 class="typing-text">I'm a <span>Student</span></h3>
+      <p>
+        Welcome to my futuristic portfolio! I’m passionate about tech, design, and code.
+      </p>
+      <div class="icon">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+      </div>
+      <div class="button">
+        <button>Contact</button>
+      </div>
+    </div>
+
+    <div class="home-img">
+      <img src="pic.webp" alt="Arbin" />
+    </div>
+  </section>
+
+  <section class="About" id="About">
+    <div class="about">
+     <h2>
+       About
+     </h2>
+    </div>
+    <div class="p">
+     <p>
+      I am a passionate and self-driven developer with a strong interest in building impactful digital solutions.
+       With a solid foundation in front-end and back-end technologies, I specialize in crafting responsive websites, user-friendly applications, and efficient systems.
+       I thrive on solving real-world problems through clean code, modern design, and continuous learning.
+        Whether working solo or in a team, I aim to deliver work that is not only functional but also meaningful.
+     </p>
+    </div>
+  </section>
+  
+  <section class="skills" id="skills">
+  <h2>My Skills</h2>
+  <div class="skill-list">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Python</div>
+    <div class="skill">C</div>
+    <div class="skill">React</div>
+  </div>
+  </section>
+
+    <section class="education" id="Education">
+  <h2>Education</h2>
+  <div class="edu-card">
+    <h3>Bachelor in Computer Application (BCA)</h3>
+    <p>Tribhuvan University, 2024 – Present</p>
+    <p><em>Major: Programming, Web Development, DBMS</em></p>
+  </div>
+
+  <div class="edu-card">
+    <h3>+2 Management with computer</h3>
+    <p>Bhanu +2, 2022 – 2024</p>
+    <p><em>Graduated with Distinction</em></p>
+  </div>
+
+  <div class="edu-card">
+    <h3>TSLC (Electrical Engineering)</h3>
+    <p>Shree Ramsita higher secondary School, 2022</p>
+    <p><em>GPA: 3.44</em></p>
+  </div>
+</section>
+
+    <section class="contact" id="contact">
+  <h2>Contact Me</h2>
+
+  <p class="contact-text">I'm always open to new opportunities. Feel free to message me!</p>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> arbinchaudhary@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +977-9800000000</p>
+      <p><i class="fas fa-map-marker-alt"></i> Biratnagar, Nepal</p>
+
+      <div class="contact-icons">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+   <script src="script.js"></script>
+
+</body>
+</html>
