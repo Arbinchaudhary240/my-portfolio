@@ -2,132 +2,338 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>A_R_B_I_N Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arbin Chaudhary — Backend Developer & Open Source Contributor. Explore projects, skills, and open source work." />
+  <title>Arbin Chaudhary — Developer Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
 </head>
 <body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#home" class="brand" aria-label="Go to home">Arbin<span class="brand--accent">.</span></a>
 
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">A_R_B_I_N</div>
-      <div class="hamburger" onclick="toggleMenu()">
-        ☰
-      </div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#Education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
 
-    </nav>
+      <nav class="nav" id="primaryNav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#skills">Skills</a></li>
+          <li><a class="nav__link" href="#open-source">Open Source</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#education">Education</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode">
+        <span class="mode-toggle__icon">🌙</span>
+        <span class="mode-toggle__label">Dark</span>
+      </button>
+    </div>
   </header>
 
-  <!-- Main Content -->
-  <section class="home" id="home">
-    <div class="home-content">
-      <h1>Hi, I'm <span class="glow">A_R_B_I_N</span></h1>
-      <h3 class="typing-text">I'm a <span>Student</span></h3>
-      <p>
-        Welcome to my futuristic portfolio! I’m passionate about tech, design, and code.
-      </p>
-      <div class="icon">
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-github"></i></a>
-        <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+  <main class="main">
+    <section id="home" class="section hero">
+      <div class="container hero__inner reveal">
+        <div class="hero__content">
+          <p class="hero__intro">Hi, I’m</p>
+          <h1 class="hero__title">Arbin <span class="hero__name">Chaudhary</span></h1>
+          <p class="hero__subtitle">
+            <span class="typing" data-words='["Open Source Contributor","GSoC Aspirant","Backend Engineer","API Specialist"]'></span>
+          </p>
+
+          <p class="hero__text">
+            I build dependable backend services and clean user interfaces, and contribute to open source projects that scale. Explore my work, open source contributions, and how I prepare for GSoC.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">See Projects</a>
+            <a href="#contact" class="btn btn--outline">Contact Me</a>
+          </div>
+
+          <div class="hero__social">
+            <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Arbinchaudhary240" aria-label="GitHub" class="social-link" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="X (Twitter)" class="social-link"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__avatar">
+            <img src="pic.webp" alt="Arbin Chaudhary" loading="lazy" />
+          </div>
+        </div>
       </div>
-      <div class="button">
-        <button>Contact</button>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>About Me</h2>
+          <p>I’m a backend developer and open source enthusiast who combines clean code with delightful experiences. I’m currently preparing strong proposals for GSoC.</p>
+        </div>
+
+        <div class="about__grid reveal">
+          <div class="about__text">
+            <p>
+              I love designing systems and interfaces that feel fast and intuitive. With experience across backend APIs, databases, and responsive UI, I focus on shipping polished products fast and iterating quickly.
+            </p>
+            <p>
+              When I'm not coding, I'm exploring new design patterns, writing technical notes, and building small tools to automate repetitive tasks.
+            </p>
+
+            <ul class="about__list">
+              <li><strong>Location:</strong> Biratnagar, Nepal</li>
+              <li><strong>Education:</strong> BCA (Tribhuvan University)</li>
+              <li><strong>Interested in:</strong> APIs, DevTools, UI performance</li>
+            </ul>
+          </div>
+
+          <div class="about__cards">
+            <div class="about__card">
+              <h3>What I Do</h3>
+              <p>Build scalable backend services, design UX-driven interfaces, and ship end-to-end features.</p>
+            </div>
+            <div class="about__card">
+              <h3>How I Work</h3>
+              <p>I prioritize readable code, modular design, and developer ergonomics so teams move fast without burnout.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="home-img">
-      <img src="pic.webp" alt="Arbin" />
-    </div>
-  </section>
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Skills</h2>
+          <p>Tools and technologies I use regularly.</p>
+        </div>
 
-  <section class="About" id="About">
-    <div class="about">
-     <h2>
-       About
-     </h2>
-    </div>
-    <div class="p">
-     <p>
-      I am a passionate and self-driven developer with a strong interest in building impactful digital solutions.
-       With a solid foundation in front-end and back-end technologies, I specialize in crafting responsive websites, user-friendly applications, and efficient systems.
-       I thrive on solving real-world problems through clean code, modern design, and continuous learning.
-        Whether working solo or in a team, I aim to deliver work that is not only functional but also meaningful.
-     </p>
-    </div>
-  </section>
-  
-  <section class="skills" id="skills">
-  <h2>My Skills</h2>
-  <div class="skill-list">
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">Python</div>
-    <div class="skill">C</div>
-    <div class="skill">React</div>
-  </div>
-  </section>
+        <div class="skills__grid reveal">
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fab fa-js"></i></div>
+            <h3>JavaScript</h3>
+            <p>Modern ES modules, Node.js, and modular architecture.</p>
+          </div>
 
-    <section class="education" id="Education">
-  <h2>Education</h2>
-  <div class="edu-card">
-    <h3>Bachelor in Computer Application (BCA)</h3>
-    <p>Tribhuvan University, 2024 – Present</p>
-    <p><em>Major: Programming, Web Development, DBMS</em></p>
-  </div>
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fab fa-node-js"></i></div>
+            <h3>Node.js</h3>
+            <p>APIs with Express / Fastify, serverless functions, and microservices.</p>
+          </div>
 
-  <div class="edu-card">
-    <h3>+2 Management with computer</h3>
-    <p>Bhanu +2, 2022 – 2024</p>
-    <p><em>Graduated with Distinction</em></p>
-  </div>
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fab fa-python"></i></div>
+            <h3>Django</h3>
+            <p>Python web framework for building scalable APIs, admin dashboards, and data-driven sites.</p>
+          </div>
 
-  <div class="edu-card">
-    <h3>TSLC (Electrical Engineering)</h3>
-    <p>Shree Ramsita higher secondary School, 2022</p>
-    <p><em>GPA: 3.44</em></p>
-  </div>
-</section>
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fas fa-database"></i></div>
+            <h3>Databases</h3>
+            <p>SQL & NoSQL: PostgreSQL, MySQL, MongoDB; schema design and indexing.</p>
+          </div>
 
-    <section class="contact" id="contact">
-  <h2>Contact Me</h2>
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fas fa-cubes"></i></div>
+            <h3>DevOps</h3>
+            <p>CI/CD pipelines, Docker, and deployment automation.</p>
+          </div>
 
-  <p class="contact-text">I'm always open to new opportunities. Feel free to message me!</p>
-
-  <div class="contact-container">
-    <div class="contact-info">
-      <p><i class="fas fa-envelope"></i> arbinchaudhary@gmail.com</p>
-      <p><i class="fas fa-phone"></i> +977-9800000000</p>
-      <p><i class="fas fa-map-marker-alt"></i> Biratnagar, Nepal</p>
-
-      <div class="contact-icons">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+          <div class="skill-card">
+            <div class="skill-card__icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Design</h3>
+            <p>Figma, responsive layouts, and accessible interfaces.</p>
+          </div>
+        </div>
       </div>
+    </section>
+    
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Projects</h2>
+          <p>Open-source projects and tools that demonstrate collaboration, scalable architecture, and technical leadership.</p>
+        </div>
+
+        <div class="projects__grid reveal">
+          <article class="project-card">
+            <div class="project-card__media" aria-hidden="true">
+              <div class="project-card__placeholder">App</div>
+            </div>
+            <div class="project-card__content">
+              <h3>Task Manager</h3>
+              <p>An open-source full-stack task manager with authentication, task boards, and real-time sync. Includes CI, tests, and contribution docs to onboard new collaborators.</p>
+              <div class="project-card__tags">
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://github.com/Arbinchaudhary240/task-manager" class="btn btn--small" target="_blank" rel="noopener">View Code</a>
+                <a href="#" class="btn btn--small btn--outline">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__media" aria-hidden="true">
+              <div class="project-card__placeholder">Web</div>
+            </div>
+            <div class="project-card__content">
+              <h3>Delicious Bite</h3>
+              <p>A React-based restaurant ordering experience with menu browsing, cart management, and a modular architecture designed for contributors.</p>
+              <div class="project-card__tags">
+                <span>React</span>
+                <span>CSS</span>
+                <span>API</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://github.com/Arbinchaudhary240/delicious-bite" class="btn btn--small" target="_blank" rel="noopener">View Code</a>
+                <a href="#" class="btn btn--small btn--outline">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__media" aria-hidden="true">
+              <div class="project-card__placeholder">System</div>
+            </div>
+            <div class="project-card__content">
+              <h3>Bank System</h3>
+              <p>A secure banking system built with Django and PostgreSQL, focusing on clean architecture, automated testing, and role-based access.</p>
+              <div class="project-card__tags">
+                <span>Python</span>
+                <span>Django</span>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://github.com/Arbinchaudhary240/bank-system" class="btn btn--small" target="_blank" rel="noopener">View Code</a>
+                <a href="#" class="btn btn--small btn--outline">Live Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section education">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Education</h2>
+          <p>A snapshot of my academic background.</p>
+        </div>
+
+        <div class="education__grid reveal">
+          <div class="education__card">
+            <h3>Bachelor in Computer Application</h3>
+            <p class="education__institution">Tribhuvan University</p>
+            <p class="education__dates">2024 – Present</p>
+            <p class="education__details"><em>Major: Programming, Web Development, DBMS</em></p>
+          </div>
+
+          <div class="education__card">
+            <h3>+2 Management with Computer</h3>
+            <p class="education__institution">Bhanu +2</p>
+            <p class="education__dates">2022 – 2024</p>
+            <p class="education__details"><em>Graduated with Distinction</em></p>
+          </div>
+
+          <div class="education__card">
+            <h3>TSLC (Electrical Engineering)</h3>
+            <p class="education__institution">Shree Ramsita Higher Secondary School</p>
+            <p class="education__dates">2022</p>
+            <p class="education__details"><em>GPA: 3.44</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Contact</h2>
+          <p>I’m applying to GSoC 2026 and always open to open source collaborations. Drop a message and I’ll get back to you.</p>
+        </div>
+
+        <div class="contact__grid reveal">
+          <div class="contact__info">
+            <div class="contact__card">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p><a href="mailto:arbinchaudhary@gmail.com">arbinchaudhary@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact__card">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Phone</h3>
+                <p><a href="tel:+9779800000000">+977 9800 000 000</a></p>
+              </div>
+            </div>
+
+            <div class="contact__card">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Location</h3>
+                <p>Biratnagar, Nepal</p>
+              </div>
+            </div>
+
+            <div class="contact__social">
+              <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/Arbinchaudhary240" aria-label="GitHub" class="social-link" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="X (Twitter)" class="social-link"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <form class="contact__form" id="contactForm">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" type="text" required placeholder="Your name" />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" type="email" required placeholder="you@example.com" />
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" required placeholder="Tell me how I can help."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Send Message</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Arbin Chaudhary. Built with HTML, CSS & JavaScript.</p>
+      <a href="#home" class="footer__top" aria-label="Scroll to top">Back to top</a>
     </div>
+  </footer>
 
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
 
-   <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
