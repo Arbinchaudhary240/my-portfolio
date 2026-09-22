@@ -166,33 +166,6 @@ function updateActiveLink() {
   getCurrentSection();
 }
 
-function setupContactForm() {
-  const form = document.getElementById("contactForm");
-  if (!form) return;
-
-  const status = form.querySelector(".form-status");
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const name = form.querySelector("#name").value.trim();
-    const email = form.querySelector("#email").value.trim();
-    const message = form.querySelector("#message").value.trim();
-
-    if (!name || !email || !message) {
-      status.textContent = "Please fill in all fields.";
-      return;
-    }
-
-    status.textContent = "Sending message...";
-
-    setTimeout(() => {
-      status.textContent = "Message sent! I’ll get back to you soon.";
-      form.reset();
-    }, 700);
-  });
-}
-
 function setCopyrightYear() {
   const el = document.getElementById("year");
   if (!el) return;
@@ -206,7 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
   observeReveal();
   setupScrollTop();
   updateActiveLink();
-  setupContactForm();
   setCopyrightYear();
 
   document.getElementById("modeToggle")?.addEventListener("click", () => {

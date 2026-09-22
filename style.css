@@ -355,13 +355,14 @@ img {
 }
 
 .btn--outline {
-  border-color: rgba(0, 0, 0, 0.15);
-  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(29, 29, 29, 0.35);
+  background: var(--surface);
   color: var(--text);
 }
 
 .btn--outline:hover {
-  background: rgba(255, 255, 255, 0.85);
+  border-color: var(--accent);
+  background: rgba(31, 111, 235, 0.08);
 }
 
 .hero__social {
@@ -487,6 +488,16 @@ img {
   margin-bottom: 0.5rem;
 }
 
+.skill-card__status {
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .skill-card p {
   color: var(--muted);
   font-size: 0.9rem;
@@ -535,6 +546,21 @@ img {
   padding: 1.4rem 1.6rem 1.6rem;
   display: grid;
   gap: 1rem;
+}
+
+.project-card__status {
+  margin-top: -0.55rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.project-card__details {
+  display: grid;
+  gap: 0.55rem;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .project-card__tags {
@@ -596,9 +622,13 @@ img {
 /* Contact */
 .contact__grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 2rem;
-  align-items: start;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.contact__info {
+  display: grid;
+  gap: 1rem;
 }
 
 .contact__card {
@@ -631,51 +661,6 @@ img {
   display: flex;
   gap: 0.75rem;
   margin-top: 1.25rem;
-}
-
-.contact__form {
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  border: 1px solid rgba(255, 255, 255, 0.13);
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(18px);
-  box-shadow: var(--shadow);
-}
-
-.form-row {
-  display: grid;
-  gap: 0.6rem;
-  margin-bottom: 1.2rem;
-}
-
-.form-row label {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.form-row input,
-.form-row textarea {
-  width: 100%;
-  padding: 0.85rem 1rem;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(0, 0, 0, 0.3);
-  color: var(--text);
-  font-size: 0.95rem;
-}
-
-.form-row input:focus,
-.form-row textarea:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.25);
-  border-color: rgba(0, 229, 255, 0.35);
-}
-
-.form-status {
-  margin-top: 0.8rem;
-  font-size: 0.88rem;
-  color: var(--muted);
-  height: 1.1rem;
 }
 
 /* Footer */
